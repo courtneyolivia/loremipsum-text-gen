@@ -1,1 +1,1 @@
-A lorem ipsum text generator created using React.
+A lorem ipsum text generator created using React.js.
