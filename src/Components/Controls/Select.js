@@ -1,19 +1,25 @@
 import React, { Component } from "react";
 
-class Output extends Component {
+class Select extends Component {
   constructor(props) {
     super(props);
     this.state = {
       value: props.value
-    };
+    }
   }
 
-  render() {
-    return (
-    <div>
+  onChange(e){
+    this.setState({value: e.target.value});
+  }
 
-    </div>
-    )
+  render(){
+    return (
+      <div>
+          <select className="form-control" onChange={this.onChange.bind(this)}>
+            <option value="true">Yes</option>
+            <option value="false"><No</option>
+      </div>
+      )
   }
 }
 
