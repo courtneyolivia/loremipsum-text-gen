@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Output from './Components/Output';
-import Select from './Components/Select';
-import Text from './Components/Text';
+import Select from './Components/Controls/Select';
+import Text from './Components/Controls/Text';
 import axios from 'axios';
 
 class App extends Component {
