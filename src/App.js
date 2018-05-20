@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Output from './Components/Output';
-import Slect from './Components/Select';
+import Select from './Components/Select';
+import Text from './Components/Text';
 import axios from 'axios';
 
 class App extends Component {
@@ -35,19 +36,23 @@ showHtml(x){
     this.setState({html: x}, this.getSampleText);
 }
 
+changeParas(number) {
+  this.setState({paras: number}, this.getSampleText);
+}
+
   render() {
     return (
       <div className="App container">
       <h1>ReactJS Sample Text Generator</h1>
       <hr />
       <form className="form-inline">
-        <div className="form-group">
-          <label>Include HTML:</label>
-          <Select value={this.state.html} onChange={this.showHtml.bind(this)} />
-        </div>
         <div className = "form-group">
           <label>Paragraphs:</label> 
-          <Text value = {this.state.html} onChange = {this.showHtml.bind(this)}/> 
+          <Text value = {this.state.html} onChange = {this.changeParas.bind(this)}/> 
+        </div>
+        <div className = "form-group">
+           <label> Include HTML: </label> 
+           <Select value = {this.state.html} onChange = {this.showHtml.bind(this)}/> 
         </div>
       </form>
         <Output value={this.state.text} />

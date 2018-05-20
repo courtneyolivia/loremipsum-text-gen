@@ -9,9 +9,7 @@ class Text extends Component {
     }
 
     onChange(e) {
-        this.setState({
-            value: e.target.value
-        }, function () {
+        this.setState({value: e.target.value}, function () {
             this.props.onChange(this.state.value);
         });
     }
