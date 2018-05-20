@@ -5,16 +5,16 @@ class Output extends Component {
         super(props);
             this.state = {
                 value: props.value
-            }
-        }
+    }
+}
 
 
 render(){
     return (
-        <div className="output">
-        {this.props.value}
+        <div className="well output">
+            {this.props.value}
         </div>
-    )
+      )
     }
 }
 
