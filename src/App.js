@@ -36,7 +36,7 @@ showHtml(x){
     this.setState({html: x}, this.getSampleText);
 }
 
-changeParas(number) {
+changeParas(number){
   this.setState({paras: number}, this.getSampleText);
 }
 
@@ -46,13 +46,13 @@ changeParas(number) {
       <h1 className="text-center">ReactJS Sample Text Generator</h1>
       <hr />
       <form className="form-inline">
-        <div className = "form-group">
+        <div className="form-group">
           <label>Paragraphs:</label> 
-          <Text value = {this.state.html} onChange = {this.changeParas.bind(this)}/> 
+          <Text value={this.state.html} onChange = {this.changeParas.bind(this)} /> 
         </div>
-        <div className = "form-group">
-           <label> Include HTML: </label> 
-           <Select value = {this.state.html} onChange = {this.showHtml.bind(this)}/> 
+        <div className="form-group">
+           <label>Include HTML: </label> 
+           <Select value = {this.state.html} onChange = {this.showHtml.bind(this)} /> 
         </div>
       </form>
       <br /><br />

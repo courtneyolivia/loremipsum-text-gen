@@ -18,8 +18,6 @@ class Text extends Component {
         return ( 
             <div>
                 <input className="form-control" type="number" value={this.state.value} onChange={this.onChange.bind(this)} />
-            
-
             </div>
         )
     }
